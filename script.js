@@ -48,20 +48,21 @@ function minusLife(i) {
 }
 
 function generateHtml() {
-    document.querySelector('body').innerHTML =
+    document.querySelector('#game_field').innerHTML =
         `
-            <h1>Multi Life Counter</h1>
         <div class="player reverse">
-            <input type="text" id="iPlayerOne" value="${playerNames[0]}" placeholder="Player One Name">
             <div class="life">
                 <button id="p1m" class="minus">-</button>
                 <p>${life[0]}</p>
                 <button id="p1p" class="plus">+</button>
             </div>
         </div>
-        <button id="reset">Reset</button>
-        <div class="player">
+        <div id="namesReset">
+            <input class="reverse" type="text" id="iPlayerOne" value="${playerNames[0]}" placeholder="Player One Name">
+            <button id="reset">Reset</button>
             <input type="text" id="iPlayerTwo" value="${playerNames[1]}" placeholder="Player Two Name">
+        </div>
+        <div class="player">
             <div class="life">
                 <button id="p2m" class="minus">-</button>
                 <p>${life[1]}</p>
